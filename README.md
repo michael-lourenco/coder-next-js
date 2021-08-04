@@ -1,2 +1,2 @@
-# coder-next-js
-Next.js &amp; React - Curso Completo - Totalmente Baseado em Projetos
+# COD3R - NEXT.js &amp; REACT
+## Curso Completo - Totalmente Baseado em Projetos
