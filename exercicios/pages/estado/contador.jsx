@@ -1,24 +1,18 @@
 import { useState } from "react"
 
 export default function Contador(){
-  const [number, setValor] = useState(0);
+  const [numero, setNumero] = useState(0);
 
-  function somar() {
-    const newValue = number + 1
-    setValor(newValue)
-  }
+  const incrementar = () => setNumero(numero + 1)
 
-  function subtrair() {
-    const newValue = number - 1
-    setValor(newValue)
-  }
+  const decrementar = () => setNumero(numero - 1)
 
   return (
     <div>
       <h1> Contador </h1>
-      <div> Valor: { number ? number : 0 } </div>
-      <button onClick = { subtrair }> - </button>
-      <button onClick = { somar }> + </button>
+      <div> Valor: { numero ? numero : 0 } </div>
+      <button onClick = { decrementar }> - </button>
+      <button onClick = { incrementar }> + </button>
     </div>
   )
 }
