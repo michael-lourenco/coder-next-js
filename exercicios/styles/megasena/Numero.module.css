@@ -1,0 +1,12 @@
+.numero {
+  display: flex;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  background-color: #222;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 2px;
+}
