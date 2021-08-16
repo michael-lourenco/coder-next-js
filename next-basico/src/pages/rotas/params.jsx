@@ -9,10 +9,10 @@ export default function Params() {
   return (
     <div>
       <h1>
-        Rotas Params : id > { id } nome > { nome }
+        Rotas Params : id - { id } nome - { nome }
       </h1> 
-      <Link href='/rotas'>
-        <button>Voltar</button>
+      <Link href = '/rotas' passHref>
+        <button> Voltar </button>
       </Link>
     </div>
   )
