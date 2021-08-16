@@ -1,17 +1,17 @@
-export default function metodos (req, res){
+export default function Metodos(req, res) {
   const { method } = req
 
-  if(method === 'GET'){
+  if( method === 'GET' ){
     res.status(200).json({
-      nome:'Pedro'
+      nome: 'Pedro',
     })
-  } else if(method === 'POST') {
+  } else if( method === 'POST' ) {
     res.status(200).json({
-      nome:'Maria'
+      nome: 'Maria',
     })
-  } else if(method === 'PUT') {
+  } else if( method === 'PUT' ) {
     res.status(200).json({
-      nome:'Jose'
+      nome: 'Jose',
     })
   }
 }
