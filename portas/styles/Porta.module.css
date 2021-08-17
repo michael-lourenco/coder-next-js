@@ -1,15 +1,28 @@
 .area {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: var(--area-porta-largura);
   height: var(--area-porta-altura);
+  margin: 5px;
 }
 
+.chao {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+}
 .estrutura {
   display: flex;
   flex-grow: 1;
-  border-left: 5px solid brown;
-  border-top: 5px solid brown;
-  border-right: 5px solid brown;
+  border-left: var(--borda-porta);
+  border-top: var(--borda-porta);
+  border-right: var(--borda-porta);
+  width: 90%;
+}
+
+.numero {
+  font-size: 3rem;
 }
 
 .porta {
@@ -21,6 +34,5 @@
   flex-grow: 1;
 }
 
-.numero {
-  font-size: 3rem;
-}
+
+

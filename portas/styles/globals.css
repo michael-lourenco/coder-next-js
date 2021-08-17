@@ -20,4 +20,5 @@ a {
 :root {
   --area-porta-altura: 310px;
   --area-porta-largura: 200px;
+  --borda-porta: 5px solid brown;
 }

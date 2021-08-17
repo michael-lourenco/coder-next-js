@@ -8,6 +8,7 @@ export default function Porta(props) {
           <div className={ styles.numero }> 3 </div>
         </div>
       </div>
+      <div className={ styles.chao }></div>
     </div>
   )
 }
