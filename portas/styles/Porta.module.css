@@ -1,4 +1,5 @@
 .area {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,6 +20,16 @@
   border-top: var(--borda-porta);
   border-right: var(--borda-porta);
   width: 90%;
+}
+
+.macaneta {
+  position: absolute;
+  align-self: flex-start;
+  top: calc(0.45 * var(--area-porta-altura));
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: brown;
 }
 
 .numero {
