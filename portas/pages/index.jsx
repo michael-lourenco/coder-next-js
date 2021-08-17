@@ -5,7 +5,9 @@ export default function Home() {
     <div style={{
       display: 'flex',
     }}>
-      <Porta />
+      <Porta selecionada = { true } />
+      <Porta selecionada = { false } />
+      <Porta selecionada />
       <Porta />
     </div>
   )

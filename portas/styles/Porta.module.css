@@ -45,5 +45,16 @@
   flex-grow: 1;
 }
 
+.selecionada{
+  border-left: var(--borda-porta-selecionada);
+  border-top: var(--borda-porta-selecionada);
+  border-right: var(--borda-porta-selecionada);
+}
 
+.selecionada .numero{
+  color: yellow;
+}
 
+.selecionada .macaneta{
+  background-color: yellow;
+}
