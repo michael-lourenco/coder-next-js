@@ -11,10 +11,6 @@ export default function Home() {
       display: 'flex',
       flexDirection: 'column',
     }}>
-      <input 
-        type = "text" 
-        value = { texto } 
-        onChange = { e => setTexto(e.target.value)} />
       <Porta 
         value = { porta } 
         onChange = { 

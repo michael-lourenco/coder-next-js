@@ -19,6 +19,7 @@
   border-left: var(--borda-porta);
   border-top: var(--borda-porta);
   border-right: var(--borda-porta);
+  background-color: #0005;
   width: 90%;
 }
 
