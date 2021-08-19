@@ -1,10 +1,12 @@
 import Porta from "../components/Porta"
 import PortaModel from "../model/porta"
 import { useState } from "react"
+import { criarPortas } from "../functions/portas";
 
 export default function Home() {
   const [porta, setPorta] = useState(new PortaModel(1));
-  const [texto, setTexto] = useState("...");
+
+  console.log(criarPortas(3,2));
 
   return (
     <div style={{
@@ -13,9 +15,7 @@ export default function Home() {
     }}>
       <Porta 
         value = { porta } 
-        onChange = { 
-          novaPorta => setPorta(novaPorta) 
-        } 
+        onChange = { novaPorta => setPorta(novaPorta) } 
       />
     </div>
   )
