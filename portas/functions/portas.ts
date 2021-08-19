@@ -8,13 +8,13 @@ export function criarPortas(quantidade: number, selecionada: number): PortaModel
   })
 }
 
-export function atualizarPortas(portas: PortaModel[], portaModificada: PortaModel): PortaModel[]{
+export function atualizarPortas(portas: PortaModel[], portaModificada: PortaModel): PortaModel[] {
   return portas.map(portaAtual => {
     const igualAModificada = portaAtual.numero === portaModificada.numero
 
-    if(igualAModificada){
+    if(igualAModificada) {
       return portaModificada
-    } else{
+    } else {
       return portaModificada.aberta ? portaAtual : portaAtual.desselecionar()
     }
   })

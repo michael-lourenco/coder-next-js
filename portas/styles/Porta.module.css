@@ -15,6 +15,7 @@
 }
 .estrutura {
   display: flex;
+  flex-direction: column-reverse;
   flex-grow: 1;
   border-left: var(--borda-porta);
   border-top: var(--borda-porta);
