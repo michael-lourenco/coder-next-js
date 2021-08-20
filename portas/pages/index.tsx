@@ -31,11 +31,12 @@ export default function Formulario() {
             text = "Porta Com Presente" 
             value = { portaComPresente } 
             onChange = { 
-              novaPortaComPresente => setPortaComPresente(novaPortaComPresente) } 
+              novaPortaComPresente => setPortaComPresente(novaPortaComPresente) 
+            } 
           />
         </Cartao>
         <Cartao bgcolor = "#28a085">
-          <Link href = { `/jogo/${ quantidadePortas }/${ portaComPresente }` }>
+          <Link href = { `/jogo/${ quantidadePortas }/${ portaComPresente }` } passHref>
             <h2 className = { styles.link }>Iniciar</h2>
           </Link>
         </Cartao>

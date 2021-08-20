@@ -15,7 +15,7 @@ export default function EntradaNumerica(props) {
     <div className = { styles.entradaNumerica }>
       <span className = { styles.text }> { props.text }</span>
       <span className = { styles.value }> { props.value }</span> 
-      <div className = { styles.botoes}>
+      <div className = { styles.botoes }>
         <button className = { styles.btn } onClick = { decrementar } > - </button>
         <button className = { styles.btn } onClick = { incrementar } > + </button>
       </div>
