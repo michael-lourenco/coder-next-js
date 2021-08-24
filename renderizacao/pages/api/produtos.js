@@ -1,23 +1,27 @@
+function numeroAleatorio(min = 1, max = 100000) {
+  return parseInt(Math.random() * (max - min)) + min
+}
+
 export default function handler(req, res) {
   res.status(200).json(
     [
       {
-        id: 1,
+        id: numeroAleatorio(),
         nome: 'Caneta',
         preco: 5.60,
       },
       {
-        id: 2,
+        id: numeroAleatorio(),
         nome: 'Mochila',
         preco: 102.30,
       },
       {
-        id: 3,
+        id: numeroAleatorio(),
         nome: 'Régua',
         preco: 7.40,
       },
       {
-        id: 4,
+        id: numeroAleatorio(),
         nome: 'Lápis',
         preco: 1.80,
       },
