@@ -22,6 +22,26 @@ const questoes: QuestaoModel[] = [
       RespostaModel.certa('Abóbora'),
     ]
   ),
+  new QuestaoModel(
+    408, 
+    'Qual o Coletivo de cães?',
+    [
+      RespostaModel.errada('Manada'),
+      RespostaModel.errada('Alcateia'),
+      RespostaModel.errada('Rebanho'),
+      RespostaModel.certa('Matilha'),
+    ]
+  ),
+  new QuestaoModel(
+    510, 
+    'Qual é o triãngulo que tem todos os lados diferentes?',
+    [
+      RespostaModel.errada('Equilátero'),
+      RespostaModel.errada('Isóceles'),
+      RespostaModel.errada('Trapézio'),
+      RespostaModel.certa('Escaleno'),
+    ]
+  ),
 ]
 
 export default questoes
