@@ -53,6 +53,7 @@ export default class QuestaoModel {
 
     return new QuestaoModel(this.#id, this.#enunciado, respostas, acertou)
   }
+  
   embaralharRespostas(): QuestaoModel {
     let respostasEmbaralhadas = embaralhar(this.#respostas)
     return new QuestaoModel(this.#id, this.#enunciado, respostasEmbaralhadas, this.#acertou)
