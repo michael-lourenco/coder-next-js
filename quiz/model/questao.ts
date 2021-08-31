@@ -1,4 +1,5 @@
 import { embaralhar } from '../functions/arrays'
+import resposta from './resposta'
 import RespostaModel from "./resposta"
 
 export default class QuestaoModel {
@@ -55,6 +56,11 @@ export default class QuestaoModel {
   embaralharRespostas(): QuestaoModel {
     let respostasEmbaralhadas = embaralhar(this.#respostas)
     return new QuestaoModel(this.#id, this.#enunciado, respostasEmbaralhadas, this.#acertou)
+  }
+
+  static criarUsandoObjeto(objeto: QuestaoModel): QuestaoModel {
+    const respostas = objeto.respostas.map(resposta => RespostaModel.criarUsandoObjeto(resposta))
+    return new QuestaoModel(objeto.id, objeto.enunciado, respostas, objeto.acertou)
   }
 
   paraObjeto() {
