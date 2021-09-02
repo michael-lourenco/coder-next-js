@@ -1,4 +1,11 @@
+import Tarefa from '../model/tarefa'
+
 export default function Home() {
+
+  let tarefa: Tarefa = new Tarefa(1, 'Exemplo de tarefa')
+  tarefa = tarefa.alternarStatus()
+  tarefa = tarefa.alternarStatus()
+
   return (
     <div className={`
       flex 
@@ -11,9 +18,9 @@ export default function Home() {
       to-yellow-600
       h-screen
     `}>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
+      <span>{ tarefa.id }</span>
+      <span>{ tarefa.descricao }</span>
+      <span>{ tarefa.concluida ? 'Concluída' : 'Ativa' }</span>
     </div>
   )
 }
