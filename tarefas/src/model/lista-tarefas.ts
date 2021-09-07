@@ -16,6 +16,35 @@ export default class ListaTarefas {
 
   get filtroUtilizado() { return this.#filtroUtilizado }
 
+  filtrarAtivas() {
+    if(!this.exibindoSomenteAtivas()){
+      return new ListaTarefas(this.#todas, TipoFiltro.ATIVAS)
+    } else {
+      return this
+    }
+  }
+
+  filtrarConcluidas() {
+    if(!this.exibindoSomenteConcluidas()){
+      return new ListaTarefas(this.#todas, TipoFiltro.CONCLUIDAS)
+    } else {
+      return this
+    }
+  }
+
+  removerFiltro() { 
+    if(!this.exibindoTodas()){
+      return new ListaTarefas(this.#todas, TipoFiltro.NENHUM)
+    } else {
+      return this
+    }
+  }
+
+  excluirConcluidas() { 
+    const somenteAtivas = this.#todas.filter(tarefa => tarefa.ativa)
+    return new ListaTarefas(somenteAtivas, TipoFiltro.NENHUM)
+  }
+
   exibindoTodas(): boolean { return this.#filtroUtilizado === TipoFiltro.NENHUM }
 
   exibindoSomenteAtivas(): boolean { return this.#filtroUtilizado === TipoFiltro.ATIVAS }
@@ -25,7 +54,7 @@ export default class ListaTarefas {
   private aplicarFiltroEm(tarefas: Tarefa[]): Tarefa[] { 
     if(this.exibindoSomenteAtivas()){
       return this.aplicarFiltroAtivas(tarefas)
-    } else if(this.exibindoSomenteConcluidas){
+    } else if(this.exibindoSomenteConcluidas()){
       return this.aplicarFiltroConcluidas(tarefas)
     } else{
       return [...tarefas]

@@ -1,10 +1,21 @@
 import Tarefa from '../model/tarefa'
+import tarefasIniciais from '../data/mock'
 
 export default function Home() {
 
-  let tarefa: Tarefa = new Tarefa(1, 'Exemplo de tarefa')
-  tarefa = tarefa.alternarStatus()
-  tarefa = tarefa.alternarStatus()
+  let tarefas = tarefasIniciais
+
+  function renderizarTarefas() {
+    return tarefas.itens.map((tarefa, indice) => {
+      return (
+        <div key={ `${ tarefa.id }-${ indice }` }>
+          <span>{ tarefa.id } | </span>
+          <span>{ tarefa.descricao } | </span>
+          <span>{ tarefa.concluida ? 'Concluída' : 'Ativa' }</span>
+        </div>
+      )
+    })
+  }
 
   return (
     <div className={`
@@ -18,9 +29,7 @@ export default function Home() {
       to-yellow-600
       h-screen
     `}>
-      <span>{ tarefa.id }</span>
-      <span>{ tarefa.descricao }</span>
-      <span>{ tarefa.concluida ? 'Concluída' : 'Ativa' }</span>
+      { renderizarTarefas() }
     </div>
   )
 }
