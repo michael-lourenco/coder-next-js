@@ -4,6 +4,14 @@ import tarefasIniciais from '../data/mock'
 export default function Home() {
 
   let tarefas = tarefasIniciais
+  // tarefas = tarefas.excluirConcluidas()
+  // tarefas = tarefas.filtrarConcluidas()
+  // tarefas = tarefas.filtrarAtivas()
+  // tarefas = tarefas.removerFiltro()
+  // tarefas = tarefas.adicionarTarefa(Tarefa.criarConcluida(5, 'Lavar o carro'))
+  // tarefas = tarefas.adicionarTarefa(Tarefa.criarAtiva(6, 'Fazer caminhada'))
+  // tarefas = tarefas.modificarTarefa(tarefas.itens[2].alternarStatus())
+  // tarefas = tarefas.modificarTarefa(tarefas.itens[3].alternarStatus())
 
   function renderizarTarefas() {
     return tarefas.itens.map((tarefa, indice) => {
