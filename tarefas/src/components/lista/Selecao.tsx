@@ -13,6 +13,7 @@ export default function Selecao(props: SelecaoProps) {
       w-7
       rounded-full
       cursor-pointer
+      text-white
       border border-gray-400
       ${ gradiente }
     `}>

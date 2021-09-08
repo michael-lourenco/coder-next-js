@@ -1,6 +1,6 @@
 import Tarefa from '../model/tarefa'
 import tarefasIniciais from '../data/mock'
-import Selecao from '../components/lista/Selecao'
+import ListaItem from '../components/lista/ListaItem'
 
 export default function Home() {
 
@@ -39,8 +39,28 @@ export default function Home() {
       h-screen
     `}>
       {/* renderizarTarefas() */}
-      <Selecao valor = { true }/>
-      <Selecao valor = { false }/>
+      <ul>
+        <ListaItem 
+          valor = "Exemplo de item #01" 
+          concluido = { false } 
+          alterarStatus = { ()=>{} }
+        />
+        <ListaItem 
+          valor = "Exemplo de item #02" 
+          concluido = { true } 
+          alterarStatus = { ()=>{} }
+        />
+        <ListaItem 
+          valor = "Exemplo de item #03" 
+          concluido = { false } 
+          alterarStatus = { ()=>{} }
+        />
+        <ListaItem 
+          valor = "Exemplo de item #04" 
+          concluido = { true } 
+          alterarStatus = { ()=>{} }
+        />
+      </ul>
     </div>
   )
 }
