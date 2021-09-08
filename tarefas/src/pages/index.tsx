@@ -1,9 +1,10 @@
 import Tarefa from '../model/tarefa'
 import tarefasIniciais from '../data/mock'
+import Selecao from '../components/lista/Selecao'
 
 export default function Home() {
 
-  let tarefas = tarefasIniciais
+  // let tarefas = tarefasIniciais
   // tarefas = tarefas.excluirConcluidas()
   // tarefas = tarefas.filtrarConcluidas()
   // tarefas = tarefas.filtrarAtivas()
@@ -13,17 +14,17 @@ export default function Home() {
   // tarefas = tarefas.modificarTarefa(tarefas.itens[2].alternarStatus())
   // tarefas = tarefas.modificarTarefa(tarefas.itens[3].alternarStatus())
 
-  function renderizarTarefas() {
-    return tarefas.itens.map((tarefa, indice) => {
-      return (
-        <div key={ `${ tarefa.id }-${ indice }` }>
-          <span>{ tarefa.id } | </span>
-          <span>{ tarefa.descricao } | </span>
-          <span>{ tarefa.concluida ? 'Concluída' : 'Ativa' }</span>
-        </div>
-      )
-    })
-  }
+  // function renderizarTarefas() {
+  //   return tarefas.itens.map((tarefa, indice) => {
+  //     return (
+  //       <div key={ `${ tarefa.id }-${ indice }` }>
+  //         <span>{ tarefa.id } | </span>
+  //         <span>{ tarefa.descricao } | </span>
+  //         <span>{ tarefa.concluida ? 'Concluída' : 'Ativa' }</span>
+  //       </div>
+  //     )
+  //   })
+  // }
 
   return (
     <div className={`
@@ -33,11 +34,13 @@ export default function Home() {
       items-center
       text-white
       bg-gradient-to-tr
-      from-purple-500
-      to-yellow-600
+      from-gray-600
+      to-gray-900
       h-screen
     `}>
-      { renderizarTarefas() }
+      {/* renderizarTarefas() */}
+      <Selecao valor = { true }/>
+      <Selecao valor = { false }/>
     </div>
   )
 }
