@@ -9,12 +9,11 @@ interface ListaItemProps {
 export default function ListaItem(props: ListaItemProps) {
   const estiloTexto = props.concluido ? 
       'line-through text-gray-300' : 'text-gray-500'
-      
+
   return (
     <li 
       onClick= { props.alterarStatus }
       className = {`
-        bg-white
         text-black
         flex
         items-center
