@@ -1,6 +1,6 @@
 import ListaTarefas from "../../model/lista-tarefas";
 import ListaItem from './ListaItem'
-import ListaBotao from './ListaBotao'
+import ListaRodape from './ListaRodape'
 interface ListaProps {
   tarefas: ListaTarefas
   mudou: (tarefas: ListaTarefas) => void
@@ -40,11 +40,10 @@ export default function Lista(props: ListaProps) {
         <li className = {`
           p-5
         `}>
-          <ListaBotao 
-            selecionado = { true } 
-            onClick = { () => {} }>
-            Todas
-          </ListaBotao>
+          <ListaRodape 
+            tarefas = { props.tarefas }
+            mudou = { props.mudou }
+          />
         </li>
       </ul>
     </div>
