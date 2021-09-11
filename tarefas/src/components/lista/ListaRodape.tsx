@@ -1,5 +1,5 @@
 import ListaTarefas from '../../model/lista-tarefas'
-
+import ListaBotao from './ListaBotao'
 interface ListaRodapeProps {
   tarefas: ListaTarefas
   mudou: (tarefas: ListaTarefas) => void
@@ -18,26 +18,50 @@ export default function ListaRodape(props: ListaRodapeProps){
             ? ' Nenhuma Tarefa Encontrada' 
             : tarefas.quantidade === 1 
               ? ' Tarefa Encontrada' 
-              : ' Tarefas Encontradas'}
+              : ' Tarefas Encontradas' }
         </span>
-        <span></span>
+        <span className = "flex-1 hidden lg:inline"></span>
       </>
     )
   }
 
   function renderizarBotoesFiltro() { 
     return (
-      <div>
-        
-      </div>
+      <>
+        <ListaBotao 
+          selecionado = { tarefas.exibindoTodas() }
+          onClick = { () => mudou(tarefas.removerFiltro()) }
+          className = "hidden md:inline"
+        >
+          Todas
+        </ListaBotao>
+        <ListaBotao 
+          selecionado = { tarefas.exibindoSomenteAtivas() }
+          onClick = { () => mudou(tarefas.filtrarAtivas()) }
+          className = "mx-4"
+        >
+          Ativas
+        </ListaBotao>
+        <ListaBotao 
+          selecionado = { tarefas.exibindoSomenteConcluidas() }
+          onClick = { () => mudou(tarefas.filtrarConcluidas()) }
+        >
+          Concluídas
+        </ListaBotao>
+      </>
     )
   }
 
   function renderizarExcluirConcluidas() { 
     return (
-      <div>
-        
-      </div>
+      <>
+        <span className = "flex-grow"></span>
+        <ListaBotao 
+          onClick = { () => mudou(tarefas.excluirConcluidas()) }
+        >
+          Exluir <span className = "hidden md:inline">Concluídas</span>
+        </ListaBotao>
+      </>
     )
   }
 

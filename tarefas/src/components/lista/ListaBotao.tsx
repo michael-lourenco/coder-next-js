@@ -1,6 +1,6 @@
 interface ListaBotaoProps {
   selecionado?: boolean
-  className?: boolean
+  className?: string
   children: any
   onClick: (evento: any) => void
 }
