@@ -1,5 +1,7 @@
 
 import { useState } from 'react'
+import Cabecalho from '../components/template/Cabecalho'
+import Conteudo from '../components/template/Conteudo'
 import Lista from '../components/lista/Lista'
 import tarefasIniciais from '../data/mock'
 
@@ -11,15 +13,17 @@ export default function Home() {
     <div className={`
       flex 
       flex-col
-      justify-center
-      items-center
-      text-white
       h-screen
       bg-gray-300
     `}>
-      <Lista tarefas = { tarefas } mudou = { (novasTarefas) => {
-        setTarefas(novasTarefas);
-      } } />
+      <Cabecalho>
+        <h1>Tarefas</h1>
+      </Cabecalho>
+      <Conteudo>
+        <Lista tarefas = { tarefas } mudou = { (novasTarefas) => {
+          setTarefas(novasTarefas);
+        } } />
+      </Conteudo>
     </div>
   )
 }

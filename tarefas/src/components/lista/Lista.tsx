@@ -28,6 +28,7 @@ export default function Lista(props: ListaProps) {
     <div className = {`
       flex
       w-3/5
+      items-start
     `}>
       <ul className = {`
         w-full
