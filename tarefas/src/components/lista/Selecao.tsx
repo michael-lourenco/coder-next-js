@@ -1,3 +1,5 @@
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 interface SelecaoProps {
   valor: boolean;
 }
@@ -17,7 +19,7 @@ export default function Selecao(props: SelecaoProps) {
       border border-gray-400
       ${ gradiente }
     `}>
-      { props.valor ? 'x' : '' }
+      { props.valor ? <FontAwesomeIcon size = "sm" icon = { faCheck } /> : '' }
     </div>
   )
 }

@@ -6,10 +6,15 @@ import Lista from '../components/lista/Lista'
 import Formulario from '../components/formulario/Formulario'
 import tarefasIniciais from '../data/mock'
 import Tarefa from '../model/tarefa'
+import ListaTarefas from '../model/lista-tarefas'
 
 
 export default function Home() {
   const [tarefas, setTarefas] = useState(tarefasIniciais)
+
+  function mudou(novasTarefas: ListaTarefas) {
+    setTarefas(novasTarefas)
+  }
 
   function novaTarefaCriada(novaTarefa: Tarefa) {
     setTarefas(tarefas.adicionarTarefa(novaTarefa))
@@ -26,9 +31,7 @@ export default function Home() {
         <Formulario novaTarefaCriada = { novaTarefaCriada }/>
       </Cabecalho>
       <Conteudo>
-        <Lista tarefas = { tarefas } mudou = { (novasTarefas) => {
-          setTarefas(novasTarefas);
-        } } />
+        <Lista tarefas = { tarefas } mudou = { mudou } />
       </Conteudo>
     </div>
   )
