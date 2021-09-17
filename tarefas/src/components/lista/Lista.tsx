@@ -26,11 +26,14 @@ export default function Lista(props: ListaProps) {
 
   return (
     <div className = {`
+      relative
       flex
       w-3/5
       items-start
     `}>
       <ul className = {`
+        absolute
+        -top-14
         w-full
         list-none
         bg-white
