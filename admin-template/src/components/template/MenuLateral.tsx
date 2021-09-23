@@ -1,11 +1,14 @@
-import { IconeAjustes, IconeCasa, IconeSino } from '../icons'
+import { IconeAjustes, IconeCasa, IconeSair, IconeSino } from '../icons'
 import Logo from './Logo'
 import MenuItem from './MenuItem'
 // Para mais icones acessar... https://heroicons.com
 
 export default function MenuLateral() {
   return(
-    <aside>
+    <aside className = {`
+      flex
+      flex-col
+    `}>
       <div className = {`
         flex
         flex-col
@@ -19,7 +22,9 @@ export default function MenuLateral() {
       `}>
         <Logo />
       </div>
-      <ul>
+      <ul className = {`
+        flex-grow
+      `}>
         <MenuItem 
           url = '/'
           texto = "Início"
@@ -34,6 +39,18 @@ export default function MenuLateral() {
           url = '/notificacoes'
           texto = "Notificacoes"
           icone = { IconeSino }
+        />
+      </ul>
+      <ul>
+        <MenuItem 
+          texto = "Sair"
+          icone = { IconeSair }
+          onClick = { () => console.log('logout') }
+          className = {`
+            text-red-600
+            hover:bg-red-400
+            hover:text-white
+          `}
         />
       </ul>
     </aside>
