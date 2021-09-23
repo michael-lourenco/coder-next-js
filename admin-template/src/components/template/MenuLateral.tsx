@@ -8,6 +8,10 @@ export default function MenuLateral() {
     <aside className = {`
       flex
       flex-col
+      bg-gray-200
+      text-gray-700
+      dark:bg-gray-900
+      dark:text-gray-200
     `}>
       <div className = {`
         flex
@@ -48,8 +52,10 @@ export default function MenuLateral() {
           onClick = { () => console.log('logout') }
           className = {`
             text-red-600
+            dark:text-red-400
             hover:bg-red-400
             hover:text-white
+            dark:hover:text-white
           `}
         />
       </ul>
