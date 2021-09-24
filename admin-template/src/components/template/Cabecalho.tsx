@@ -8,7 +8,7 @@ interface CabecalhoProps {
 }
 
 export default function Cabecalho(props: CabecalhoProps) {
-  const { tema, alternarTema } = useAppData
+  const { tema, alternarTema } = useAppData()
   return (
     <div className = {`
       flex
