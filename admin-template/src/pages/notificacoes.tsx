@@ -1,8 +1,7 @@
 import Layout from '../components/template/Layout'
-import useAppData from '../data/hook/useAppData'
+
 
 export default function Notificacoes() {
-  const { alternarTema} = useAppData()
 
   return (
     <div>
@@ -10,7 +9,7 @@ export default function Notificacoes() {
         titulo = 'Notificações' 
         subtitulo = 'Gerenciamento de nofificacoes'
       >
-          <button onClick={ alternarTema }>alternar tema</button>
+        <h1>Notificações</h1>
       </Layout>     
     </div>
   )
