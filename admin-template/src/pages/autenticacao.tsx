@@ -1,8 +1,12 @@
 import { useState } from 'react'
-import AuthInput from "../components/auth/AuthInput";
-import { IconeAtencao } from '../components/icons';
+import AuthInput from "../components/auth/AuthInput"
+import { IconeAtencao } from '../components/icons'
+import useAuth from '../data/hook/useAuth'
 
 export default function Autenticacao() { 
+
+  const { usuario, loginGoogle } = useAuth()
+
   const [erro, setErro] = useState(null)
   const [modo, setModo] = useState<'login' | 'cadastro'>('login')
   const [email, setEmail] = useState('')
@@ -112,7 +116,7 @@ export default function Autenticacao() {
         <hr className = "my-6 border-gray-300 w-full" />
 
         <button
-          onClick = { submeter }
+          onClick = { loginGoogle }
           className = {`
             w-full
             bg-red-500
