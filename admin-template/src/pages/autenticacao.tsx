@@ -28,7 +28,7 @@ export default function Autenticacao() {
   }
 
   return(
-    <div className={`
+    <div className = {`
       flex
       h-screen
       items-center
@@ -74,24 +74,24 @@ export default function Autenticacao() {
           border-red-700
           rounded-lg
         `}>
-          { IconeAtencao(7) }
-          <span className = {`
-            ml-3
-          `}> { erro } </span>
-        
+            { IconeAtencao(7) }
+            <span className = {`
+              ml-3
+            `}> 
+              { erro } 
+            </span>
           </div>  
         ) : false }
    
-        
         <AuthInput 
-          label = "Email" 
+          label = 'Email' 
           tipo = 'email'
           valor = { email }
           valorMudou = { setEmail }
           obrigatorio
         />
         <AuthInput 
-          label = "Senha" 
+          label = 'Senha' 
           tipo = 'password'
           valor = { senha }
           valorMudou = { setSenha }
@@ -140,7 +140,7 @@ export default function Autenticacao() {
                 font-semibold
                 cursor-pointer
               `}
-            > Crie uma conta gratuitamente</a>
+            > Crie uma conta gratuitamente </a>
           </p>
         ) : (
           <p className = "mt-8">
@@ -153,7 +153,7 @@ export default function Autenticacao() {
                 font-semibold
                 cursor-pointer
               `}
-            > Entre com as suas credenciais</a>
+            > Entre com as suas credenciais </a>
           </p>
         )}
       </div>
