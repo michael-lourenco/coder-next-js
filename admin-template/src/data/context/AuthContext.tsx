@@ -1,4 +1,4 @@
-import route from 'next/router'
+import router from 'next/router'
 import { createContext, useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import firebase from '../../firebase/config'
@@ -6,6 +6,7 @@ import Usuario from '../../model/Usuario'
 
 interface AuthContextProps {
     usuario?: Usuario
+    carregando?: boolean
     loginGoogle?: () => Promise<void>
     logoutGoogle?: () => Promise<void>
 }
@@ -62,7 +63,7 @@ export function AuthProvider(props){
             )
     
             configurarSessao(resp.user)
-            route.push('/')
+            router.push('/')
         } finally {
             setCarregando(false)
         }
@@ -82,12 +83,15 @@ export function AuthProvider(props){
         if(Cookies.remove('admin-template-cod3r-auth')) {
             const cancelar =  firebase.auth().onIdTokenChanged(configurarSessao)
             return () => cancelar()
+        } else {
+            setCarregando(false)
         }
     }, [])
 
     return (
         <AuthContext.Provider value = {{
             usuario,
+            carregando,
             loginGoogle,
             logoutGoogle
         }}>
