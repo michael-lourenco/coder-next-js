@@ -1,3 +1,4 @@
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
@@ -6,10 +7,14 @@ export default function Home() {
       h-screen
       justify-center
       items-center
+      bg-gradient-to-r
+      from-blue-500
+      to-purple-500
+      text-white
     `}>
-      <span className = {`
-        text-4xl
-      `}>Texto</span>
+      <Layout titulo = "Cadastro Simples">
+        <span>Conteúdo</span>
+      </Layout>
     </div>
   )
 }
