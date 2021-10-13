@@ -1,6 +1,15 @@
-import Layout from "../components/Layout";
+import Layout from '../components/Layout'
+import Tabela from '../components/Tabela'
+import Cliente from '../core/Cliente'
 
 export default function Home() {
+
+  const clientes = [
+    new Cliente('Ana', 34, '1'),
+    new Cliente('Bia', 55, '2'),
+    new Cliente('Carlos', 24, '3'),
+    new Cliente('Pedro', 30, '4'),
+  ]
   return (
     <div className = {`
       flex
@@ -13,7 +22,7 @@ export default function Home() {
       text-white
     `}>
       <Layout titulo = "Cadastro Simples">
-        <span>Conteúdo</span>
+        <Tabela clientes = { clientes }></Tabela>
       </Layout>
     </div>
   )
