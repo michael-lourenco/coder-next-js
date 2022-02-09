@@ -12,7 +12,7 @@ Este projeto engloba 1(um) curso realizado através da plataforma [Cod3r](https:
 
 Conhecimentos adquiridos:
  - Construir aplicações React profissionais com o Framework `NextJS`
- - Integração com `TailwindCSS, Firebase e TypeScript`
+ - Integração com `TailwindCSS`, `Firebase` e `TypeScript`
  - Fazer `Deploy na Núvem`
  - `6 Projetos` na Prática
  - Boas Práticas de Programação
